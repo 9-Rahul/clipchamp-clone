@@ -22,6 +22,7 @@ export default function Header() {
                             <svg
                                 className="arrow-down"
                                 viewBox="0 0 25 25"
+                                fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
@@ -33,6 +34,7 @@ export default function Header() {
                                 />
                             </svg>
 
+
                         </a>  </li>
 
 
@@ -41,6 +43,7 @@ export default function Header() {
                             <svg
                                 className="arrow-down"
                                 viewBox="0 0 25 25"
+                                fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
@@ -50,66 +53,75 @@ export default function Header() {
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                 />
-                            </svg> </a>   </li>
+                            </svg>
 
 
-                        <li><a href="#">For work <svg
-                            className="arrow-down"
-                            viewBox="0 0 25 25"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M6.43555 9.62451L12.4355 15.6245L18.4355 9.62451"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg> </a> </li>
+                        </a>   </li>
 
 
-                        <li><a href="#">Learn <svg
-                            className="arrow-down"
-                            viewBox="0 0 25 25"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M6.43555 9.62451L12.4355 15.6245L18.4355 9.62451"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg> </a>  </li>
+                        <li><a href="#">For work
+
+                            <svg
+                                className="arrow-down"
+                                viewBox="0 0 25 25"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M6.43555 9.62451L12.4355 15.6245L18.4355 9.62451"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
 
 
-                        <li><a href="#">Pricing <svg
-                            className="arrow-down"
-                            viewBox="0 0 25 25"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M6.43555 9.62451L12.4355 15.6245L18.4355 9.62451"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg> </a> </li>
+                        </a> </li>
 
-                        <li><a href="#">About <svg
-                            className="arrow-down"
-                            viewBox="0 0 25 25"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M6.43555 9.62451L12.4355 15.6245L18.4355 9.62451"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg> </a>  </li>
+
+                        <li><a href="#">Learn
+
+                            <svg
+                                className="arrow-down"
+                                viewBox="0 0 25 25"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M6.43555 9.62451L12.4355 15.6245L18.4355 9.62451"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+
+
+                        </a>  </li>
+
+
+                        <li><a href="#">Pricing </a> </li>
+
+                        <li><a href="#">About
+
+                            <svg
+                                className="arrow-down"
+                                viewBox="0 0 25 25"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M6.43555 9.62451L12.4355 15.6245L18.4355 9.62451"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+
+
+                        </a>  </li>
 
                     </ul>
                 </div>
@@ -119,6 +131,15 @@ export default function Header() {
             <div className="header-right">
                 <Button variant="secondary">Sign In</Button>
                 <Button variant="primary">Try for free</Button>
+
+                <Image
+                    className='menu-icon'
+                    src="/assets/icons/menu.svg"
+                    alt="menu icon"
+                    height={32}
+                    width={32}
+                />
+                {/* <Button variant="secondary btn-create-vid">Create Video</Button> */}
             </div>
         </div>
     )

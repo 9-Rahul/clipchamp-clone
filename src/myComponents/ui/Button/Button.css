@@ -1,20 +1,21 @@
 .btn {
-    padding: 14px 40px;
-    border-radius: 12px;
+    padding: 12px 30px;
+    border-radius: 0.625rem;
+    ;
     font-size: 16px;
     font-weight: 500;
     border: none;
     cursor: pointer;
     /* animation */
     transition:
-        background-color 0.25s ease,
-        transform 0.2s ease;
+        background-color 0.3s ease,
+        transform 0.3s ease;
 
     will-change: transform;
 }
 
 .btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.07);
 }
 
 /* Variants */
@@ -45,4 +46,16 @@
 
 .btn-dark:hover {
     background: #1a1a1a;
+}
+
+.btn-create-vid {
+    color: #6E006C;
+    border: none;
+    background-color: #fff;
+}
+
+.btn-create-vid:hover {
+    color: #7d047b;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    /* background-color: aqua; */
 }

@@ -1,0 +1,163 @@
+.testimonials-outer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.testimonials-outer h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #313242;
+    margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.testimonial-item {
+    flex: 1;
+    min-width: 220px;
+    max-width: 630px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+.user-avatar.monika {
+    background-color: #2ECC71;
+    /* Green placeholder color */
+}
+
+/* Quote bubble */
+.quote-bubble {
+    background-color: #EFEDFD;
+    padding: 16px 22px;
+    border-radius: 0.125rem 1rem 1rem;
+    text-align: left;
+    color: #545472;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+.user-details h3 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #313242;
+    margin: 0;
+}
+
+.user-details span {
+    font-size: 14px;
+    color: #8C8C9A;
+}
+
+/* Social Proof Badges */
+.social-proof-badges {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    border: 1px solid #E0E0E0;
+    border-radius: 1rem;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    min-width: 300px;
+}
+
+.badge-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge-name {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.badge-name.facebook {
+    color: #1877F2;
+}
+
+.badge-name.product-hunt {
+    color: #DA552F;
+}
+
+.badge-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.review-count {
+    font-size: 12px;
+    color: #545472;
+    text-decoration: underline;
+    margin-top: 5px;
+}
+
+@media (max-width:600px) {
+    .testimonials-outer {
+        padding-top: 50px;
+    }
+
+    .testimonials-grid {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .social-proof-badges {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        /* background-color: #1877F2; */
+    }
+
+    .badge {
+        max-width: 350px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+}
