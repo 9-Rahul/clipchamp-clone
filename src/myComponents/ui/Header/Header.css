@@ -45,14 +45,14 @@
 }
 
 .arrow-down {
-    height: 18px;
-    width: 18px;
+    height: 16px;
+    width: 16px;
     transition: transform 0.15s ease;
 }
 
 /* ONLY zoom arrow on hover */
 .nav-links ul li a:hover .arrow-down {
-    transform: scale(1.25);
+    transform: translateY(2px);
 }
 
 

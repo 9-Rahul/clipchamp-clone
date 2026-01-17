@@ -61,6 +61,7 @@ export default function Testimonials() {
                         <span className="review-count">4.8 — 9.5k+ reviews</span>
                     </div>
                 </div>
+
             </div>
         </div>
     )
