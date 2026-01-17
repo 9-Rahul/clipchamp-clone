@@ -1,0 +1,49 @@
+.bottom-outer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px 0px;
+}
+
+.bottom-container {
+    width: 100%;
+    min-height: 300px;
+    background-image: url(/assets/images/bottom-banner-img.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    gap: 24px;
+    border-radius: 0;
+    /* Assuming full width or keep as is */
+}
+
+.bottom-container h2 {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Sofia Sans', sans-serif;
+    /* matches other components potentially */
+    max-width: 600px;
+    line-height: 1.2;
+}
+
+.bottom-container button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    background-color: white;
+    color: #554AF0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.bottom-container button:hover {
+    transform: scale(1.05);
+}
