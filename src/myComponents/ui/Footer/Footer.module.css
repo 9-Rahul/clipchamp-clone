@@ -249,7 +249,7 @@
 }
 
 .language-selector:hover {
-    border-color: #4D43DE;
+    border-color: var(--accent-purple);
     transition: color .2s, transform .2s;
     transform: translateY(-2px);
     cursor: pointer;
@@ -273,16 +273,15 @@
 .lang-icon-select {
     position: absolute;
     left: .75rem;
-    ;
     pointer-events: none;
-    color: #4D43DE;
+    color: var(--accent-purple);
 }
 
 .select-chevron {
     position: absolute;
     right: 1rem;
     pointer-events: none;
-    color: #313242;
+    color: var(--text-dark);
     transition: transform 0.2s ease;
 }
 
@@ -297,7 +296,7 @@
 }
 
 .social-icon {
-    color: #313242;
+    color: var(--text-dark);
     transition: color 0.2s ease, transform 0.2s ease;
     display: flex;
     align-items: center;
@@ -372,7 +371,7 @@
 
 .legal-right a:hover {
     text-decoration: none;
-    color: #4D43DE;
+    color: var(--accent-purple);
 }
 
 .privacy-choice {

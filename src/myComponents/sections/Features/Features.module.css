@@ -16,7 +16,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
     justify-content: flex-start;
     padding: 0;
 }
@@ -76,7 +75,8 @@
     color: #fff;
     line-height: 48px;
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: normal;
     text-shadow: 0 .1875rem .5625rem #3c3c4840;
     max-width: 38rem;
     margin: 0 0 1rem;

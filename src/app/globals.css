@@ -1,3 +1,11 @@
+:root {
+  --primary-purple: #6b4eff;
+  --accent-purple: #4D43DE;
+  --text-muted: #545472;
+  --text-dark: #313242;
+  --hover-light: #f8f8fc;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -5,7 +13,7 @@
 }
 
 body {
-  font-family: "sans-serif", "Arial", sans-serif;
+  font-family: var(--font-inter), "sans-serif", "Arial", sans-serif;
   background-color: #fff;
   color: #000;
 }

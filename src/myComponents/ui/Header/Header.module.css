@@ -3,10 +3,13 @@
     background-color: #fff;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     z-index: 100;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    /* gap: 10rem; */
 }
 
 .header-left {
@@ -37,11 +40,14 @@
 }
 
 .nav-links ul li {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     line-height: 20px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* background-color: red; */
+    position: relative;
+    cursor: pointer;
 }
 
 .arrow-down {
@@ -50,10 +56,7 @@
     transition: transform 0.15s ease;
 }
 
-/* ONLY zoom arrow on hover */
-.nav-links ul li a:hover .arrow-down {
-    transform: translateY(2px);
-}
+/* ONLY zoom arrow on hover handled below in .nav-item:hover .arrow-down */
 
 
 .nav-links ul li a {
@@ -65,11 +68,63 @@
     font-weight: 400;
     transition: color .1s;
     align-items: center;
-    color: #545472;
+    color: var(--text-muted);
+    will-change: transform;
+    background: 0px 0px;
+    transition: 0.2s;
 }
 
 .nav-links ul li a:hover {
-    color: #4D43DE;
+    color: var(--accent-purple);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    background-color: #fff;
+    min-width: 250px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    padding: 16px 0;
+    display: none;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dropdown-menu ul li {
+    padding: 0;
+}
+
+.dropdown-menu ul li a {
+    padding: 8px 24px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    display: block;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: var(--hover-light);
+    color: var(--accent-purple);
+}
+
+.nav-item:hover .arrow-down {
+    transform: translateY(2px);
+    color: var(--accent-purple);
 }
 
 .header-right {
@@ -88,7 +143,7 @@
 @media screen and (max-width: 1365px) {
     .header-outer {
         justify-content: space-between;
-        padding: 10px 50px;
+        padding: 0px 50px;
     }
 
     .nav-links {
@@ -100,10 +155,16 @@
     }
 }
 
+@media screen and (max-width: 800px) {
+    .header-outer {
+        gap: 0px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .header-outer {
         justify-content: space-between;
-        padding: 10px 20px;
+        padding: 12px 30px;
     }
 }
 
