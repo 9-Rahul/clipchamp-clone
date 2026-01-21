@@ -1,0 +1,222 @@
+.footer-outer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* Reset and Base Styles */
+.footer-wrapper {
+    width: 100%;
+    background-color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.footer-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 4rem 1rem 2rem;
+}
+
+/* Base Column Styles */
+.footer-col {
+    flex: 1 1 200px;
+    min-width: 180px;
+}
+
+.footer-col-nested {
+    flex: 1 1 200px;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Specific Breakpoints */
+
+/* 1. At 62em, 4th column (Apps/Support) drops down and splits */
+@media (max-width: 62em) {
+
+    /* Make Column 4 take full width */
+    .footer-container>.footer-col-nested:last-child {
+        flex: 0 0 100%;
+        flex-direction: row;
+        border-top: 1px solid #f0f0f0;
+        padding-top: 2rem;
+    }
+
+    .footer-container>.footer-col-nested:last-child>div {
+        flex: 1;
+    }
+}
+
+/* 2. At 800px, 3rd column (About/Learn) drops down and splits */
+@media (max-width: 800px) {
+
+    /* Column 3 drops */
+    .footer-container>.footer-col-nested:nth-last-child(2) {
+        flex: 0 0 100%;
+        flex-direction: row;
+        border-top: 1px solid #f0f0f0;
+        padding-top: 2rem;
+    }
+
+    .footer-container>.footer-col-nested:nth-last-child(2)>div {
+        flex: 1;
+    }
+
+    /* Ensure Col 1 and 2 take 50% each when 3 and 4 are dropped */
+    .footer-col {
+        flex: 1 1 45%;
+    }
+}
+
+/* Headers & Lists */
+.footer-outer p {
+    margin: 0 0 24px 0;
+    color: #2e248f;
+    /* padding-bottom: 1rem; */
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.footer-outer ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.footer-outer a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 200%;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    transition: font-variation-settings .2s, color .2s;
+    position: relative;
+}
+
+.footer-outer a:hover {
+    color: #AD58DB;
+}
+
+.footer-outer a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 8px;
+    /* Increased height for the curve */
+    bottom: -6px;
+    left: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 15 Q50 5 100 15' stroke='%23AD58DB' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+}
+
+.footer-outer a:hover::after {
+    transform: scaleX(1);
+}
+
+.chevron {
+    display: none;
+}
+
+.col-header {
+    display: block;
+}
+
+/* Mobile Accordion Styles */
+@media screen and (max-width: 516px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0px;
+        width: 100%;
+    }
+
+    /* Reset dropped styles for mobile stack */
+    .footer-container>.footer-col-nested {
+        flex: none !important;
+        flex-direction: column !important;
+        border-top: none !important;
+        padding-top: 0 !important;
+        gap: 0 !important;
+    }
+
+    .footer-col,
+    .footer-section {
+        background: #fff;
+        border: 2px solid #eaeafa;
+        border-radius: .75rem;
+        margin-bottom: .75rem;
+        color: #2e248f;
+    }
+
+    .col-header {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+        height: 3rem;
+        padding: 0 1.25rem;
+        font-size: 1.125rem;
+        font-variation-settings: "wght" 600;
+        cursor: pointer;
+        background: 0 0;
+        border: none;
+        align-items: center;
+    }
+
+    .footer-outer p {
+        margin: 0;
+        color: #1a1a1a;
+        font-size: 16px;
+    }
+
+    .footer-outer a:hover {
+        color: #2e248f;
+    }
+
+    .footer-outer a::after {
+        background-image: none;
+    }
+
+    .chevron {
+        display: block;
+        width: 20px;
+        height: 20px;
+        color: #1a1a1a;
+        transition: transform 0.3s ease;
+    }
+
+    /* Open State */
+    .footer-col.open .chevron,
+    .footer-section.open .chevron {
+        transform: rotate(180deg);
+    }
+
+    /* Hide UL by default on mobile */
+    .footer-outer ul {
+        display: none;
+        padding: 0 1.25rem;
+    }
+
+    /* Show UL when open */
+    .footer-col.open ul,
+    .footer-section.open ul {
+        display: block;
+    }
+}

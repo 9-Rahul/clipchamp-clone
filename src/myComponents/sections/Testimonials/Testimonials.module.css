@@ -14,6 +14,7 @@
 
 .testimonials-grid {
     display: flex;
+    flex-direction: row;
     /* flex-wrap: wrap; */
     justify-content: center;
     gap: 40px;
@@ -31,6 +32,7 @@
 
 .user-info {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 15px;
     margin-bottom: 6px;
@@ -89,11 +91,11 @@
 .badge {
     border: 1px solid #E0E0E0;
     border-radius: 1rem;
-    padding: 20px 30px;
+    padding: 14px 12px;
     display: flex;
     align-items: center;
-    gap: 30px;
-    min-width: 300px;
+    gap: 20px;
+    min-width: 280px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
 }
@@ -128,6 +130,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 6px;
 }
 
 .stars {
@@ -136,8 +139,9 @@
 }
 
 .review-count {
-    font-size: 12px;
-    color: #545472;
+    font-size: 14.4px;
+    line-height: 20px;
+    color: #64647C;
     text-decoration: underline;
     margin-top: 5px;
 }
