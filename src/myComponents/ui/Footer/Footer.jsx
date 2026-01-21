@@ -208,7 +208,6 @@ export default function Footer() {
                             <a href="#">Privacy and cookies</a>
                             <a href="#">Consumer Health Data Privacy Policy</a>
                             <a href="#" className={styles['privacy-choice']}>
-
                                 <img className={styles['privacy-choice-icon']} src="/assets/icons/privacy-choice.svg" alt="Privacy Choice" height={30} width={30} />
                                 <span className={styles['privacy-choice-text']}>Your Privacy Choices</span>
                             </a>
