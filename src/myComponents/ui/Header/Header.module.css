@@ -177,11 +177,15 @@
 @media screen and (max-width: 600px) {
     .header-outer {
         justify-content: space-between;
-        padding: 12px 30px;
+        padding: 12px 24px;
     }
 }
 
 @media screen and (max-width: 515px) {
+    .header-outer {
+        padding: 12px 30px;
+    }
+
     .header-right Button {
         display: none;
     }

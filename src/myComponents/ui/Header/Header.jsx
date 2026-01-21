@@ -134,13 +134,13 @@ export default function Header() {
                 <Button variant="secondary">Sign In</Button>
                 <Button variant="primary">Try for free</Button>
 
-                <button className={styles['menu-icon-container']} onClick={toggleSidebar}>
+                <div className={styles['menu-icon-container']} onClick={toggleSidebar}>
                     <svg className={styles['menu-icon']} viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.43555 12.6245H21.4355" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M3.43555 6.62451H21.4355" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M3.43555 18.6245H21.4355" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                </button>
+                </div>
             </div>
         </div>
     )
