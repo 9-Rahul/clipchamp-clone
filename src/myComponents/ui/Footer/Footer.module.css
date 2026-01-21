@@ -386,9 +386,11 @@
 
 
 .privacy-choice-icon {
-    width: 18px;
-    height: 18px;
+    width: 30px;
+    height: 30px;
     display: block;
+    margin: 0px;
+    padding: 0px;
 }
 
 .privacy-choice-text {
