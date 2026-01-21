@@ -1,54 +1,49 @@
 .footer-outer {
-    width: 100%;
     display: flex;
     justify-content: center;
+    width: 100%;
     background-color: #fff;
-    padding: 20px;
 }
 
-/* Reset and Base Styles */
 .footer-wrapper {
     width: 100%;
     background-color: #fff;
-    font-family: 'Segoe UI', sans-serif;
     color: #333;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-container {
-    max-width: 1240px;
-    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
     justify-content: space-between;
-    padding: 4rem 1rem 2rem;
+    gap: 2rem;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 4rem 4rem 2rem;
 }
 
-/* Base Column Styles */
+/* Column Base Styles */
 .footer-col {
     flex: 1 1 200px;
     min-width: 180px;
 }
 
 .footer-col-nested {
-    flex: 1 1 200px;
-    min-width: 180px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    flex: 1 1 200px;
+    min-width: 180px;
 }
 
-/* Specific Breakpoints */
-
-/* 1. At 62em, 4th column (Apps/Support) drops down and splits */
+/* Tablet Layout Modifications */
 @media (max-width: 62em) {
-
-    /* Make Column 4 take full width */
     .footer-container>.footer-col-nested:last-child {
-        flex: 0 0 100%;
+        display: flex;
         flex-direction: row;
-        border-top: 1px solid #f0f0f0;
+        flex: 0 0 100%;
         padding-top: 2rem;
+        border-top: 1px solid #f0f0f0;
     }
 
     .footer-container>.footer-col-nested:last-child>div {
@@ -56,77 +51,72 @@
     }
 }
 
-/* 2. At 800px, 3rd column (About/Learn) drops down and splits */
 @media (max-width: 800px) {
-
-    /* Column 3 drops */
     .footer-container>.footer-col-nested:nth-last-child(2) {
-        flex: 0 0 100%;
+        display: flex;
         flex-direction: row;
-        border-top: 1px solid #f0f0f0;
+        flex: 0 0 100%;
         padding-top: 2rem;
+        border-top: 1px solid #f0f0f0;
     }
 
     .footer-container>.footer-col-nested:nth-last-child(2)>div {
         flex: 1;
     }
 
-    /* Ensure Col 1 and 2 take 50% each when 3 and 4 are dropped */
     .footer-col {
         flex: 1 1 45%;
     }
 }
 
-/* Headers & Lists */
-.footer-outer p {
+/* Content Elements */
+.footer-container p {
     margin: 0 0 24px 0;
     color: #2e248f;
-    /* padding-bottom: 1rem; */
     font-size: .875rem;
     font-weight: 700;
     line-height: normal;
 }
 
-.footer-outer ul {
+.footer-container ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
-    padding: 0px;
-    margin: 0px;
 }
 
-
-.footer-outer a {
-    text-decoration: none;
+.footer-container a {
+    position: relative;
+    display: inline-block;
     color: #555;
     font-size: 1rem;
     font-weight: 400;
     line-height: 200%;
-    -webkit-text-decoration: none;
     text-decoration: none;
-    transition: font-variation-settings .2s, color .2s;
-    position: relative;
+    -webkit-text-decoration: none;
+    transition: color .2s, font-variation-settings .2s;
 }
 
-.footer-outer a:hover {
+.footer-container a:hover {
     color: #AD58DB;
 }
 
-.footer-outer a::after {
+/* Curved Underline Animation */
+.footer-container a::after {
     content: '';
     position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 8px;
-    /* Increased height for the curve */
     bottom: -6px;
     left: 0;
+    width: 100%;
+    height: 8px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 15 Q50 5 100 15' stroke='%23AD58DB' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 60%;
+    transform: scaleX(0);
     transform-origin: bottom left;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.2s ease-out;
 }
 
-.footer-outer a:hover::after {
+.footer-container a:hover::after {
     transform: scaleX(1);
 }
 
@@ -138,60 +128,63 @@
     display: block;
 }
 
-/* Mobile Accordion Styles */
+/* Mobile Accordion Design */
 @media screen and (max-width: 516px) {
     .footer-container {
+        display: flex;
         flex-direction: column;
-        gap: 0;
-        padding: 1rem 0px;
         width: 100%;
+        gap: 0;
+        padding: 1rem 0;
     }
 
-    /* Reset dropped styles for mobile stack */
     .footer-container>.footer-col-nested {
-        flex: none !important;
+        display: flex;
         flex-direction: column !important;
-        border-top: none !important;
-        padding-top: 0 !important;
+        flex: none !important;
         gap: 0 !important;
+        padding-top: 0 !important;
+        border-top: none !important;
     }
 
     .footer-col,
     .footer-section {
+        margin-bottom: .75rem;
+        padding: 0;
         background: #fff;
+        color: #2e248f;
         border: 2px solid #eaeafa;
         border-radius: .75rem;
-        margin-bottom: .75rem;
-        color: #2e248f;
     }
 
     .col-header {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         position: relative;
         width: 100%;
         height: 3rem;
         padding: 0 1.25rem;
+        background: transparent;
+        border: none;
         font-size: 1.125rem;
         font-variation-settings: "wght" 600;
         cursor: pointer;
-        background: 0 0;
-        border: none;
-        align-items: center;
     }
 
     .footer-outer p {
         margin: 0;
-        color: #1a1a1a;
-        font-size: 16px;
+        color: #2e248f;
+        font-size: 1rem;
     }
 
     .footer-outer a:hover {
-        color: #2e248f;
+        color: #2c18dd;
     }
 
     .footer-outer a::after {
-        background-image: none;
+        display: none;
     }
 
     .chevron {
@@ -202,21 +195,273 @@
         transition: transform 0.3s ease;
     }
 
-    /* Open State */
     .footer-col.open .chevron,
     .footer-section.open .chevron {
         transform: rotate(180deg);
     }
 
-    /* Hide UL by default on mobile */
     .footer-outer ul {
         display: none;
-        padding: 0 1.25rem;
+        padding: 0 1.25rem 1.25rem;
     }
 
-    /* Show UL when open */
     .footer-col.open ul,
     .footer-section.open ul {
         display: block;
     }
+}
+
+.footer-two {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 4rem 2rem;
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer-row:last-child {
+    border-top: 1px solid #f0f0f0;
+}
+
+.language-selector {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 15rem;
+    background: #fff;
+    border: 1px solid #2c18dd;
+    border-radius: 10px;
+    padding-left: 1.5rem;
+    padding-right: .75rem;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+    gap: 8px;
+    height: 2.625rem;
+}
+
+.language-selector:hover {
+    border-color: #4D43DE;
+    transition: color .2s, transform .2s;
+    transform: translateY(-2px);
+    cursor: pointer;
+    opacity: 0.6;
+
+}
+
+.lang-select {
+    width: 100%;
+    height: 100%;
+    color: #2e248f;
+    font-variation-settings: "wght" 400;
+    appearance: none;
+    border: none;
+}
+
+.lang-select {
+    cursor: pointer;
+}
+
+.lang-icon-select {
+    position: absolute;
+    left: .75rem;
+    ;
+    pointer-events: none;
+    color: #4D43DE;
+}
+
+.select-chevron {
+    position: absolute;
+    right: 1rem;
+    pointer-events: none;
+    color: #313242;
+    transition: transform 0.2s ease;
+}
+
+.lang-select:focus+.select-chevron {
+    transform: translateY(2px);
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icon {
+    color: #313242;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+}
+
+.youtube:hover {
+    color: #ff0000 !important;
+}
+
+.x:hover {
+    color: #1da1f2 !important;
+}
+
+.instagram:hover {
+    color: #b900b4 !important;
+}
+
+.fb:hover {
+    color: #1877f2 !important;
+}
+
+.linkedin:hover {
+    color: #0077b5 !important;
+}
+
+.tiktok:hover {
+    color: #fe2c55 !important;
+}
+
+.legal-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ms-logo {
+    height: 24px;
+}
+
+.ms-logo:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 0px;
+}
+
+.legal-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.legal-right a {
+    font-size: 14px;
+    line-height: 28px;
+    color: #555;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.legal-right a:hover {
+    text-decoration: none;
+    color: #4D43DE;
+}
+
+.privacy-choice {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    /* background-color: brown; */
+}
+
+
+.privacy-choice-icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+.privacy-choice-text {
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer-row.two {
+    margin-top: 30px;
+    /* background-color: green; */
+}
+
+@media screen and (max-width: 1000px) {
+
+    .footer-row.two {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+        text-align: center;
+    }
+
+
+    .legal-left {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .legal-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-two {
+        padding-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .footer-row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+.footer-three {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2rem;
+    align-items: center;
+    background: linear-gradient(#fff0 25%, #d5bdfc 100%);
+    border-top: 1px solid #faf9ff;
+    /* background-color: #b900b4; */
+}
+
+.footer-bottom-text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.footer-bottom-text p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    max-width: 32rem;
+    margin: 0 auto 1rem;
+    line-height: 150%;
 }
