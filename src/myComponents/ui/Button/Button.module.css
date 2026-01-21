@@ -1,7 +1,6 @@
 .btn {
     padding: 12px 30px;
     border-radius: 0.625rem;
-    ;
     font-size: 16px;
     font-weight: 500;
     border: none;
@@ -20,19 +19,20 @@
 
 /* Variants */
 .btn-primary {
-    background: #6b4eff;
+    background: var(--primary-purple);
     color: white;
 }
 
 .btn-primary:hover {
     background: #5638ee;
+    /* Keeping specific hover shade for now, or could use filter */
 }
 
 .btn-secondary {
     /* background: #f2f2f2; */
     background-color: transparent;
-    color: #6b4eff;
-    border: 1px solid #6b4eff;
+    color: var(--primary-purple);
+    border: 1px solid var(--primary-purple);
 }
 
 .btn-secondary:hover {

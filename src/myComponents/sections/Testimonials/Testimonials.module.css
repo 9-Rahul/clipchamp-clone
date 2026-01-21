@@ -14,10 +14,11 @@
 
 .testimonials-grid {
     display: flex;
+    flex-direction: row;
     /* flex-wrap: wrap; */
     justify-content: center;
     gap: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .testimonial-item {
@@ -31,6 +32,7 @@
 
 .user-info {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 15px;
     margin-bottom: 6px;
@@ -89,10 +91,10 @@
 .badge {
     border: 1px solid #E0E0E0;
     border-radius: 1rem;
-    padding: 20px 30px;
+    padding: 14px 12px;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     min-width: 300px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
@@ -128,6 +130,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 6px;
 }
 
 .stars {
@@ -136,15 +139,17 @@
 }
 
 .review-count {
-    font-size: 12px;
-    color: #545472;
+    font-size: 14.4px;
+    line-height: 20px;
+    color: #64647C;
     text-decoration: underline;
     margin-top: 5px;
 }
 
 @media (max-width:600px) {
     .testimonials-outer {
-        padding-top: 50px;
+        padding: 50px 1rem;
+
     }
 
     .testimonials-grid {
@@ -157,14 +162,27 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 1rem;
+        padding: 20px 0px;
         /* background-color: #1877F2; */
     }
 
     .badge {
         max-width: 350px;
+        min-width: none;
         padding-left: 3rem;
         padding-right: 3rem;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .badge {
+        max-width: 350px;
+        min-width: none;
+        padding-left: 8px;
+        padding-right: 8px;
         flex-direction: column;
         gap: 4px;
     }
