@@ -43,8 +43,8 @@
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     /* background-color: red; */
     position: relative;
     cursor: pointer;
@@ -143,7 +143,7 @@
 @media screen and (max-width: 1365px) {
     .header-outer {
         justify-content: space-between;
-        padding: 0px 50px;
+        padding: 12px 50px;
     }
 
     .nav-links {
