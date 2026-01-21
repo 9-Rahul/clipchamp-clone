@@ -1,11 +1,22 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import styles from './Header.module.css'
 import Image from 'next/image'
 import Button from "@/myComponents/ui/Button/Button"
+import Navbar from "@/myComponents/ui/Navbar/Navbar"
 
 export default function Header() {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+    };
+
+
     return (
         <div className={styles['header-outer']}>
+            <Navbar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+
             <div className={styles['header-left']}>
 
                 <div className={styles['logo']}>
@@ -123,14 +134,13 @@ export default function Header() {
                 <Button variant="secondary">Sign In</Button>
                 <Button variant="primary">Try for free</Button>
 
-                <Image
-                    className={styles['menu-icon']}
-                    src="/assets/icons/menu.svg"
-                    alt="menu icon"
-                    height={32}
-                    width={32}
-                />
-                {/* <Button variant="secondary btn-create-vid">Create Video</Button> */}
+                <button className={styles['menu-icon-container']} onClick={toggleSidebar}>
+                    <svg className={styles['menu-icon']} viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.43555 12.6245H21.4355" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M3.43555 6.62451H21.4355" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M3.43555 18.6245H21.4355" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                </button>
             </div>
         </div>
     )

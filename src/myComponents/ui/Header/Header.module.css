@@ -135,9 +135,22 @@
     gap: 15px;
 }
 
-.menu-icon {
+
+.menu-icon-container {
     display: none;
     cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.menu-icon {
+    height: 2rem;
+    width: 2rem;
+    transition: color 0.3s ease;
+}
+
+.menu-icon-container:hover .menu-icon {
+    color: var(--accent-purple);
 }
 
 @media screen and (max-width: 1365px) {
@@ -150,7 +163,7 @@
         display: none;
     }
 
-    .menu-icon {
+    .menu-icon-container {
         display: block;
     }
 }
